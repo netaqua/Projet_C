@@ -1,0 +1,62 @@
+﻿<Page x:Class="Projet_C.User"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projet_C"
+      mc:Ignorable="d" 
+      Height="450" Width="800"
+      Title="User" Background="White">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="73" Stroke="Black" Opacity="2" VerticalAlignment="Top" Width="816">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#815094" />
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Button x:Name="locationBtn"  Content="My Locations" FontFamily="Verdana" FontSize="11" Foreground="White" Background="Black" BorderBrush="WhiteSmoke"  HorizontalAlignment="Left" Height="37" Margin="460,15,0,0" VerticalAlignment="Top" Width="102"/>
+        <Button x:Name="reservationBtn"  Content="My Reservations" FontFamily="Verdana" FontSize="11" Foreground="White" Background="Black" BorderBrush="WhiteSmoke"  HorizontalAlignment="Left" Height="37" Margin="580,15,0,0" VerticalAlignment="Top" Width="102"/>
+        <Button x:Name="logoutBtn" Content="Log Out" FontFamily="Verdana" FontSize="11" Background="GhostWhite" BorderBrush="#FBDA62" HorizontalAlignment="Left" Height="37" Margin="700,15,0,0" VerticalAlignment="Top" Width="76" Click="logoutBtn_Click"/>
+
+        <Image HorizontalAlignment="Left" Source="C:\Users\antoi\Downloads\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Images\logowpf.png" Height="52" Margin="16,9,0,0" VerticalAlignment="Top" Width="59"/>
+
+        <DataGrid Name="pgInfos" AutoGenerateColumns="False" Margin="20,352,277,25">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="0.5*" Header="ID" Binding="{Binding idPlayer}"/>
+                <DataGridTextColumn Width="1.4*" Header="Username" Binding="{Binding username}"/>
+                <DataGridTextColumn Width="1.3*" Header="Password" Binding="{Binding password}"/>
+                <DataGridTextColumn Width="1.6*" Header="Date of Birth" Binding="{Binding dateOfBirth}"/>
+                <DataGridTextColumn Width="1*" Header="Pseudo" Binding="{Binding pseudo}"/>
+                <DataGridTextColumn Width="1*" Header="Balance" Binding="{Binding balance}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Rectangle HorizontalAlignment="Left" Height="94" Margin="10,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="774" Fill="Transparent">
+
+        </Rectangle>
+        <Button Content="Edit Profile" HorizontalAlignment="Left" Height="68" Margin="550,352,0,0" VerticalAlignment="Top" Width="221" FontFamily="Verdana" FontSize="20" Background="#FBDA62"  BorderBrush="Black"/>
+        <Label Content="Personal Informations" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="20" Foreground="Black" Width="317"/>
+
+        <!-- Catalogue-->
+        <DataGrid Name="dgGame" AutoGenerateColumns="False" Margin="89,87,41,153">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="3*" Header="Name" Binding="{Binding name}"/>
+                <DataGridTextColumn Width="1*" Header="Credit Cost" Binding="{Binding creditCost}"/>
+                <DataGridTextColumn Width="2*" Header="Plateforme" Binding="{Binding console}"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Rectangle HorizontalAlignment="Left" Height="210" Margin="20,87,0,0" Stroke="Black" VerticalAlignment="Top" Width="70">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#815094" />
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Button x:Name="pcBtn" HorizontalAlignment="Left" Height="31" Margin="35,100,0,0" VerticalAlignment="Top" Width="43"/><!-- A retirer, je prefere le laisser pour en discuter, mais on ne sait preter des jeux pc depuis des années-->
+        <Button x:Name="playstationBtn" HorizontalAlignment="Left" Height="31" Margin="35,148,0,0" VerticalAlignment="Top" Width="43"/>
+        <Button x:Name="xboxBtn" HorizontalAlignment="Left" Height="31" Margin="35,201,0,0" VerticalAlignment="Top" Width="43"/>
+        <Button x:Name="nintendoBtn" HorizontalAlignment="Left" Height="31" Margin="35,251,0,0" VerticalAlignment="Top" Width="43"/>
+
+    </Grid>
+</Page>

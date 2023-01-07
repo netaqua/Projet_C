@@ -1,0 +1,50 @@
+﻿<Page x:Class="Projet_C.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projet_C"
+      mc:Ignorable="d" 
+      Height="650" Width="1000"
+      Title="Registration" Background="White">
+
+    <!-- Page qui permet à un utilisateur de s'enregistrer -->
+    <!-- il manque les champs de texte a remplir sur la droite mais à voir si on garde cette idée où si on part sur plus simple-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="633*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Section-->
+        <Border Background="#4822FA" Padding="30" CornerRadius="25 0 0 40" Margin="-35,-1,0,0" Grid.RowSpan="2">
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="C:\Users\antoi\Downloads\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Images\userlogo.png" Width="160" Height="160" Margin="0 0 0 40"/>
+
+                <TextBlock Text="Only one step left" TextAlignment="Center" FontWeight="SemiBold" FontSize="30" Foreground="Black"/>
+                <TextBlock TextWrapping="Wrap" FontSize="16" TextAlignment="Center" Foreground="Black" Margin="0 20 0 20" Text="it only should take a couple of seconds"/>
+
+                <Image Source="C:\Users\antoi\Downloads\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Images\flechepng.png" Height="105" Width="150"></Image>
+            </StackPanel>
+        </Border>
+        <!--right Section-->
+        <Label Grid.Column="1" Content="Username" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,100,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Password" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,200,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Date of birth" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,300,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="username" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="30" Margin="300,104,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="41"/>
+        <TextBox x:Name="password" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="30" Margin="300,204,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225"/>
+        <DatePicker x:Name="dateOfBirth" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="20" Margin="300,304,0,287" Grid.Row="1" Width="225"/>
+        <Button x:Name="backBtn" Grid.Column="1" Content="Go Back" FontFamily="Verdana" FontSize="11" Background="GhostWhite" BorderBrush="#FBDA62" HorizontalAlignment="Left" Height="34" Margin="510,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="114" Click="backBtn_Click"/>
+        <Button x:Name="registrationBtn" Grid.Column="1" FontFamily="Verdana" FontSize="11" Background="#FBDA62" BorderBrush="WhiteSmoke" Content="Register" FontWeight="Black" HorizontalAlignment="Left" Margin="63,434,0,0" Grid.Row="1" VerticalAlignment="Top" Height="51" Width="462" Click="registrationBtn_Click"/>
+        
+
+
+
+    </Grid>
+</Page>
