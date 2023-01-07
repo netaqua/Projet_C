@@ -35,7 +35,7 @@
         <Rectangle HorizontalAlignment="Left" Height="94" Margin="10,343,0,0" Stroke="Black" VerticalAlignment="Top" Width="774" Fill="Transparent">
 
         </Rectangle>
-        <Button Content="Edit Profile" HorizontalAlignment="Left" Height="68" Margin="550,352,0,0" VerticalAlignment="Top" Width="221" FontFamily="Verdana" FontSize="20" Background="#FBDA62"  BorderBrush="Black"/>
+        <Button Content="Edit Profile" HorizontalAlignment="Left" Height="68" Margin="550,352,0,0" VerticalAlignment="Top" Width="221" FontFamily="Verdana" FontSize="20" Background="#FBDA62"  BorderBrush="Black" Click="Button_Click"/>
         <Label Content="Personal Informations" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="20" Foreground="Black" Width="317"/>
 
         <!-- Catalogue-->
@@ -54,9 +54,9 @@
         </Rectangle>
 
         <Button x:Name="pcBtn" HorizontalAlignment="Left" Height="31" Margin="35,100,0,0" VerticalAlignment="Top" Width="43"/><!-- A retirer, je prefere le laisser pour en discuter, mais on ne sait preter des jeux pc depuis des années-->
-        <Button x:Name="playstationBtn" HorizontalAlignment="Left" Height="31" Margin="35,148,0,0" VerticalAlignment="Top" Width="43"/>
-        <Button x:Name="xboxBtn" HorizontalAlignment="Left" Height="31" Margin="35,201,0,0" VerticalAlignment="Top" Width="43"/>
-        <Button x:Name="nintendoBtn" HorizontalAlignment="Left" Height="31" Margin="35,251,0,0" VerticalAlignment="Top" Width="43"/>
+        <Button x:Name="playstationBtn" Content="Playstation" TextElement.FontSize="7" HorizontalAlignment="Left" Height="31" Margin="35,148,0,0" VerticalAlignment="Top" Width="43"/>
+        <Button x:Name="xboxBtn" Content="Xbox" TextElement.FontSize="10" HorizontalAlignment="Left" Height="31" Margin="35,201,0,0" VerticalAlignment="Top" Width="43"/>
+        <Button x:Name="nintendoBtn" Content="Nintendo" TextElement.FontSize="7" HorizontalAlignment="Left" Height="31" Margin="35,251,0,0" VerticalAlignment="Top" Width="43"/>
 
     </Grid>
 </Page>

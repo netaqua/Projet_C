@@ -30,5 +30,10 @@ namespace Projet_C
             Window w = new MainWindow();
             w.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
