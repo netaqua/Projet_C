@@ -33,7 +33,8 @@ namespace Projet_C
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //Il faut réussir a faire une popup qui nous demandes les infos sur le user a modifier et ensuite juste faire l'appel de la fonction update du db player.
+            //j'arrive pas a l'ajouter, si tu trouve dit moi
         }
     }
 }

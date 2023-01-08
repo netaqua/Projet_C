@@ -50,14 +50,14 @@ namespace Projet_C
                     SqlCommand cmd = new SqlCommand(add_data, connection);
 
                     cmd.Parameters.AddWithValue("@username", username.Text);
-                    cmd.Parameters.AddWithValue("@password", password.Text);
+                    cmd.Parameters.AddWithValue("@password", password.DataContext);
                     cmd.ExecuteNonQuery();
                     int count = Convert.ToInt32(cmd.ExecuteScalar());   //Compte si un User est trouvé en db
 
                     connection.Close();
                     Player p = new Player(); //Il faudrait essayer d'envoyer p vers les autres pages pour ne pas devoir refaire toutes la recherche une fois la page user ouvert
                     username.Text = "";
-                    password.Text = "";
+                    password.DataContext = "";
                     if(count > 0)   //Si user est trouvé, il passe à la suite et valide l'opération
                     {
                         using(SqlDataReader reader = cmd.ExecuteReader())
