@@ -24,7 +24,6 @@ namespace Projet_C
         {
             InitializeComponent();
             pgInfos.Items.Add(p);
-            pgInfos.SelectedItems.Add(p);
             
         }
 
