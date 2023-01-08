@@ -72,17 +72,20 @@ namespace Projet_C
                         }
                         if (p.IsAdmin == 1)
                         {
-                            //Admin a = new Admin();
-                            NavigationService.Navigate(new Admin());
+                        
+                        Window w = new Admin();
+                        w.Show();
+                        
+
+                        //NavigationService.Navigate(new Admin());
                     }
                         else
                         {
                             if(p.IsAdmin == 0)
                             {
-                                //User u = new User();   //Le Login est fonctionnel mais la page User ne veut pas s'afficher (exception) 
-                                NavigationService.Navigate(new User());//Peut-etre essayer de passer par une fenetre au lieu d'une page ?
-                                //this.Content = u;      //Il faudra aussi voir plus tard pour envoyer soit vers User ou Admin en fonction du statut du Player
-                            }
+                            Window w = new User(p);
+                            w.Show();
+                        }
                             else    //Si user introuvable (=0), on affiche un message d'erreur
                             {
                                 MessageBox.Show("erreur lors du chargement de l'utilisateur ");    //Si mauvaises données rentrées, ce message s'affiche et on reste à la page de Connexion

@@ -147,6 +147,32 @@ namespace Projet_C.DAO
             }
             return players;
         }
+       /* public List<Player> ReadPlayer()       //modifier pour n'avoir que les infos de son Player
+        {
+            List<Player> players = new List<Player>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.Player WHERE username='@Username' and password= '@Password", connection);
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Player player = new Player();
+                        player.IdPlayer = reader.GetInt32("idPlayer");
+                        player.Balance = reader.GetInt32("balance");
+                        player.Username = reader.GetString("username");
+                        player.Password = reader.GetString("password");//Il Faut l'ajouter a player pour pouvoir verifier que la connection peut se faire
+                        player.RegistrationDate = reader.GetDateTime("registrationDate");
+                        player.DateOfBirthday = reader.GetDateTime("dateOfBirth");
+                        player.IsAdmin = reader.GetInt32("isAdmin");// Il faut modifier isAdmin pour pouvoir y a vaoir accées depuis ici
+                        players.Add(player);
+                    }
+                }
+            }
+            return players;
+        }
+       */
 
         public bool Insert(Player p)
         {

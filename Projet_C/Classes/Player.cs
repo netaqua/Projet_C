@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Projet_C.Classes
 {
-    internal class Player
+    public class Player
     {
         private int idPlayer;
         private int balance;
@@ -91,6 +91,14 @@ namespace Projet_C.Classes
             PlayerDB dB = new PlayerDB();
             return dB.ReadAll();
         }
+
+       /* public static Player GetPlayer()
+        {
+            PlayerDB dB = new PlayerDB();
+            return dB.ReadPlayer();
+        }*/
+
+
 
         public bool Insert()
         {

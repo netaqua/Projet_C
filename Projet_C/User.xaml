@@ -1,13 +1,11 @@
-﻿<Page x:Class="Projet_C.User"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Projet_C"
-      mc:Ignorable="d" 
-      Height="450" Width="800"
-      Title="User" Background="White">
-
+﻿<Window x:Class="Projet_C.User"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projet_C"
+        mc:Ignorable="d"
+        Title="User" Height="450" Width="800">
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="73" Stroke="Black" Opacity="2" VerticalAlignment="Top" Width="816">
             <Rectangle.Fill>
@@ -21,14 +19,14 @@
 
         <Image HorizontalAlignment="Left" Source="C:\Users\antoi\Downloads\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Projet_C\Images\logowpf.png" Height="52" Margin="16,9,0,0" VerticalAlignment="Top" Width="59"/>
 
-        <DataGrid Name="pgInfos" AutoGenerateColumns="False" Margin="20,352,277,25">
+        <DataGrid Name="pgInfos" AutoGenerateColumns="False" ItemsSource="{Binding}" Margin="20,352,277,25" ColumnWidth="*" IsSynchronizedWithCurrentItem="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="0.5*" Header="ID" Binding="{Binding idPlayer}"/>
-                <DataGridTextColumn Width="1.4*" Header="Username" Binding="{Binding username}"/>
-                <DataGridTextColumn Width="1.3*" Header="Password" Binding="{Binding password}"/>
-                <DataGridTextColumn Width="1.6*" Header="Date of Birth" Binding="{Binding dateOfBirth}"/>
-                <DataGridTextColumn Width="1*" Header="Pseudo" Binding="{Binding pseudo}"/>
-                <DataGridTextColumn Width="1*" Header="Balance" Binding="{Binding balance}"/>
+                <DataGridTextColumn  Header="ID" Binding="{Binding idPlayer}"/>
+                <DataGridTextColumn  Header="Username" Binding="{Binding username}"/>
+                <DataGridTextColumn  Header="Password" Binding="{Binding password}"/>
+                <DataGridTextColumn  Header="Date of Birth" Binding="{Binding dateOfBirth}"/>
+                <DataGridTextColumn  Header="Pseudo" Binding="{Binding pseudo}"/>
+                <DataGridTextColumn  Header="Balance" Binding="{Binding balance}"/>
             </DataGrid.Columns>
 
         </DataGrid>
@@ -36,14 +34,12 @@
 
         </Rectangle>
         <Button Content="Edit Profile" HorizontalAlignment="Left" Height="68" Margin="550,352,0,0" VerticalAlignment="Top" Width="221" FontFamily="Verdana" FontSize="20" Background="#FBDA62"  BorderBrush="Black" Click="Button_Click"/>
-        <Label Content="Personal Informations" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="20" Foreground="Black" Width="317"/>
+        <Label Content="Personal Informations" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="20" Foreground="Black" Width="210"/>
 
         <!-- Catalogue-->
-        <DataGrid Name="dgGame" AutoGenerateColumns="False" Margin="89,87,41,153">
+        <DataGrid Name="dgGame" AutoGenerateColumns="True" Margin="89,87,41,137" ColumnWidth="*">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="3*" Header="Name" Binding="{Binding name}"/>
-                <DataGridTextColumn Width="1*" Header="Credit Cost" Binding="{Binding creditCost}"/>
-                <DataGridTextColumn Width="2*" Header="Plateforme" Binding="{Binding console}"/>
+
             </DataGrid.Columns>
 
         </DataGrid>
@@ -53,10 +49,13 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Button x:Name="pcBtn" HorizontalAlignment="Left" Height="31" Margin="35,100,0,0" VerticalAlignment="Top" Width="43"/><!-- A retirer, je prefere le laisser pour en discuter, mais on ne sait preter des jeux pc depuis des années-->
-        <Button x:Name="playstationBtn" Content="Playstation" TextElement.FontSize="7" HorizontalAlignment="Left" Height="31" Margin="35,148,0,0" VerticalAlignment="Top" Width="43"/>
-        <Button x:Name="xboxBtn" Content="Xbox" TextElement.FontSize="10" HorizontalAlignment="Left" Height="31" Margin="35,201,0,0" VerticalAlignment="Top" Width="43"/>
-        <Button x:Name="nintendoBtn" Content="Nintendo" TextElement.FontSize="7" HorizontalAlignment="Left" Height="31" Margin="35,251,0,0" VerticalAlignment="Top" Width="43"/>
+
+        <!-- A retirer, je prefere le laisser pour en discuter, mais on ne sait preter des jeux pc depuis des années-->
+        <Button x:Name="Playstation" Content="Playstation" TextElement.FontSize="10" HorizontalAlignment="Left" Height="35" Margin="30,100,0,0" VerticalAlignment="Top" Width="52" Click="button_Click"/>
+        <Button x:Name="XBOX" Content="Xbox" TextElement.FontSize="10" HorizontalAlignment="Left" Height="35" Margin="30,170,0,0" VerticalAlignment="Top" Width="52" Click="button_Click"/>
+        <Button x:Name="NINTENDO" Content="Nintendo" TextElement.FontSize="10" HorizontalAlignment="Left" Height="35" Margin="30,230,0,0" VerticalAlignment="Top" Width="52" Click="button_Click"/>
+        <Button x:Name="infoPlayer" Content="Voir Info" HorizontalAlignment="Left" Margin="232,315,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="11" Foreground="White" Background="Black" BorderBrush="WhiteSmoke" Click="infoPlayer_Click"  />
+
 
     </Grid>
-</Page>
+</Window>
