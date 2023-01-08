@@ -35,10 +35,12 @@
         </Border>
         <!--right Section-->
         <Label Grid.Column="1" Content="Username" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,100,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Grid.Column="1" Content="Password" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,200,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Password" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,151,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Grid.Column="1" Content="Pseudo" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,202,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Grid.Column="1" Content="Date of birth" FontFamily="Verdana" FontSize="30" HorizontalAlignment="Left" Margin="54,300,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox x:Name="username" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="30" Margin="300,104,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" Height="41"/>
-        <TextBox x:Name="password" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="30" Margin="300,204,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225"/>
+        <TextBox x:Name="password" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="30" Margin="300,159,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225"/>
+        <TextBox x:Name="pseudo" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="30" Margin="300,210,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225"/>
         <DatePicker x:Name="dateOfBirth" Grid.Column="1" HorizontalAlignment="Left" FontFamily="A" FontSize="20" Margin="300,304,0,287" Grid.Row="1" Width="225"/>
         <Button x:Name="backBtn" Grid.Column="1" Content="Go Back" FontFamily="Verdana" FontSize="11" Background="GhostWhite" BorderBrush="#FBDA62" HorizontalAlignment="Left" Height="34" Margin="510,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="114" Click="backBtn_Click"/>
         <Button x:Name="registrationBtn" Grid.Column="1" FontFamily="Verdana" FontSize="11" Background="#FBDA62" BorderBrush="WhiteSmoke" Content="Register" FontWeight="Black" HorizontalAlignment="Left" Margin="63,434,0,0" Grid.Row="1" VerticalAlignment="Top" Height="51" Width="462" Click="registrationBtn_Click"/>

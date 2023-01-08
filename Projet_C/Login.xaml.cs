@@ -36,13 +36,11 @@ namespace Projet_C
         {
             Window w = new MainWindow();
             w.Show();
+            
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            try
-            {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -50,14 +48,12 @@ namespace Projet_C
                     SqlCommand cmd = new SqlCommand(add_data, connection);
 
                     cmd.Parameters.AddWithValue("@username", username.Text);
-                    cmd.Parameters.AddWithValue("@password", password.DataContext);
+                    cmd.Parameters.AddWithValue("@password", password.Text);
                     cmd.ExecuteNonQuery();
                     int count = Convert.ToInt32(cmd.ExecuteScalar());   //Compte si un User est trouvé en db
-
-                    connection.Close();
                     Player p = new Player(); //Il faudrait essayer d'envoyer p vers les autres pages pour ne pas devoir refaire toutes la recherche une fois la page user ouvert
                     username.Text = "";
-                    password.DataContext = "";
+                    password.Text = "";
                     if(count > 0)   //Si user est trouvé, il passe à la suite et valide l'opération
                     {
                         using(SqlDataReader reader = cmd.ExecuteReader())
@@ -76,17 +72,16 @@ namespace Projet_C
                         }
                         if (p.IsAdmin == 1)
                         {
-                            Admin a = new Admin();
-                            Uri admin = new Uri ("Admin.xaml", UriKind.Relative);
-                            this.Content = a;
-                        }
+                            //Admin a = new Admin();
+                            NavigationService.Navigate(new Admin());
+                    }
                         else
                         {
                             if(p.IsAdmin == 0)
                             {
-                                User u = new User();   //Le Login est fonctionnel mais la page User ne veut pas s'afficher (exception) 
-                                                       //Peut-etre essayer de passer par une fenetre au lieu d'une page ?
-                                this.Content = u;      //Il faudra aussi voir plus tard pour envoyer soit vers User ou Admin en fonction du statut du Player
+                                //User u = new User();   //Le Login est fonctionnel mais la page User ne veut pas s'afficher (exception) 
+                                NavigationService.Navigate(new User());//Peut-etre essayer de passer par une fenetre au lieu d'une page ?
+                                //this.Content = u;      //Il faudra aussi voir plus tard pour envoyer soit vers User ou Admin en fonction du statut du Player
                             }
                             else    //Si user introuvable (=0), on affiche un message d'erreur
                             {
@@ -102,11 +97,6 @@ namespace Projet_C
                     }
                   
                 }
-            }
-            catch
-            {
-                
-            }
         }
     }
 }

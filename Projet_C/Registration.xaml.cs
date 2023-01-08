@@ -40,8 +40,11 @@ namespace Projet_C
             Player p = new Player();
             p.Username = username.Text;
             p.Password = password.Text;
-            p.DateOfBirthday = DateTime.Parse(dateOfBirth.Text);
+            p.DateOfBirthday = dateOfBirth.DisplayDate;
+            p.Pseudo = pseudo.Text;
+            p.RegistrationDate = DateTime.Now;
             p.Insert();
+            this.NavigationService.Navigate(new Uri("MainWindow.xaml", UriKind.Relative));//Impossible de retourner a la page MainWindows une fois fait, mais la création du player est bon 
         }
     }
 }

@@ -153,7 +153,7 @@ namespace Projet_C.DAO
             bool success = false;
             using(SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand($"INSERT into dbo.Player(username,password,dateOfBirth) values ('{p.Username}','{p.Password}','{p.DateOfBirthday}')",connection);
+                SqlCommand cmd = new SqlCommand($"INSERT into dbo.Player(username,password,dateOfBirth, registrationDate,pseudo) values ('{p.Username}','{p.Password}','{p.DateOfBirthday}','{p.RegistrationDate}','{p.Pseudo}')",connection);
                 connection.Open(); // permet d'excécuter une commande d'insert / update / delete
                 int res = cmd.ExecuteNonQuery();
                 success = res > 0;
