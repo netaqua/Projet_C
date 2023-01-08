@@ -36,6 +36,7 @@ namespace Projet_C.DAO
                         p = new Player();
                         p.IdPlayer = reader.GetInt32("idPlayer");
                         p.Balance = reader.GetInt32("balance");
+                        p.Pseudo = reader.GetString("pseudo");
                         p.Username = reader.GetString("username");
                         p.Password = reader.GetString("password");//Il Faut l'ajouter a player pour pouvoir verifier que la connection peut se faire
                         p.RegistrationDate = reader.GetDateTime("registrationDate");
@@ -77,6 +78,7 @@ namespace Projet_C.DAO
                         p.IdPlayer = reader.GetInt32("idPlayer");
                         p.Balance = reader.GetInt32("balance");
                         p.Username = reader.GetString("username");
+                        p.Pseudo = reader.GetString("pseudo");
                         p.Password = reader.GetString("password");//Il Faut l'ajouter a player pour pouvoir verifier que la connection peut se faire
                         p.RegistrationDate = reader.GetDateTime("registrationDate");
                         p.DateOfBirthday = reader.GetDateTime("dateOfBirth");
@@ -136,6 +138,7 @@ namespace Projet_C.DAO
                         Player player = new Player();
                         player.IdPlayer = reader.GetInt32("idPlayer");
                         player.Balance = reader.GetInt32("balance");
+                        player.Pseudo = reader.GetString("pseudo");
                         player.Username = reader.GetString("username");
                         player.Password = reader.GetString("password");//Il Faut l'ajouter a player pour pouvoir verifier que la connection peut se faire
                         player.RegistrationDate = reader.GetDateTime("registrationDate");
